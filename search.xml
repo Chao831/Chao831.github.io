@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F07%2F21%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[使用GitHub搭建个人博客]]></title>
+    <url>%2Farticle%2Fgithub-hexo-blog%2F</url>
+    <content type="text"><![CDATA[Hexo快速、简洁且高效的博客框架官网 文章:如何快速搭建个人博客 前期准备检查电脑是否安装了 Node.js ？ 1git --version 检查电脑是否安装了 Node.js ？ 1node -v 安装node.js下载Node.js 安装Git下载Git 安装Hexo12345$ npm install hexo-cli -g $ hexo init blog$ cd blog$ npm install$ hexo server hexo init blog是创建一个为 blog 的文件夹，把 hexo 相应的代码下载到该文件中下。 12345678├── .gitgnore git 忽略文件，设置提交文件时，哪些文件不提交├── _config.yml 站点配置文件├── package.json 站点版本，站点依赖文件├── yarn.lock yarn.lock 文件由 Yarn 自动创建，并且完全通过 Yarn 进行操作。├── node_modules npm 文件缓存目录├── scaffolds 文夹件下存放的是文章、页面模版├── source 文夹件下存放的是我们的资源文件├── themes 文件下存放的是我们的主题文件 npm install是安装 hexo 相关的代码。 hexo server是启动本地服务，启动完成后，如 ： 123$ hexo serverINFO Start processingINFO Hexo is running at http://localhost:4000 . Press Ctrl+C to stop. 在浏览器输入 http://localhost:4000/ 就可以访问刚刚创建的博客了。 hexo 常用命令12345678$ hexo generate (hexo g) 生成静态文件$ hexo server (hexo s) 启动本地服务$ hexo deploy (hexo d) 提交到远程仓库$ hexo new page "xx"(hexo n page) 创建页面 $ hexo new "xx" (hexo n "") 创建文章$ hexo d -g 生成静态并提交到远程仓库$ hexo s -g 生成静态文件并启动本地预览$ hexo clean 清除本地 public 文件 Git添加远程仓库仓库名: username.github.io 仓库名称中的username更换为GitHub用户名,并在该仓库设置中找到GItHub Pages以用户名.github.io 一般默认设为站点,若无则设置下即可 修改站点配置文件修改站点配置文件(_config.yml) 找到文件_config.yml,修改depoly.填写的为ssh地址 1234deploy: type: git repo: git@github.com:username/username.github.io.git branch: master 修改 site 相关信息 ： 1234567title: xxsubtitle: description:keywords:author: xxlanguage: zh-Hanstimezone: 注 ：网站名称（title），作者 (author)，语言 (language) 提交远程仓库首次使用,安装扩展插件 1$ npm install hexo-deployer-git --save 生成静态文件 1$ hexo g 提交到远程仓库 1$hexo d 执行完成后，就可以在 github 上看见我们提交的静态文件了，也可以通过http://username.github.io 访问我们的博客了，username 改成你的github 用户名。]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
 </search>
